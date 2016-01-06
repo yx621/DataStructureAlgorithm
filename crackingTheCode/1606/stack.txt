@@ -1,0 +1,29 @@
+prevent the code that overflowed a buffer from compromising the execution by overwriting the stack values?
+
+maintain some form of thread-specific isolation between threads
+
+code like native code (C++) or like java
+
+malicious program input (overflow a buffer and overwrite stack pointer) 
+
+reduce the risk of buffer overflows in native code 
+    -- modern compiler provides this sort of stack protection through a command line option
+    -- gcc -fstack-protector-all
+    
+Java 
+    -- virtual machine running managed code in these languages make it impossible to gain complete access to the stack within the process
+    -- Code Access Security (CAS) or appdomain permissions to control such execution
+
+Prevent reverse engineering DLLs
+
+    -- use obfuscators 
+    -- don't store any data (string) in open form. compress and encode it
+    -- static link so no DLL to attach
+    -- stripe all symbols
+    -- anti-debugging techniques from the malware world to prevent reverse engineering 
+    -- protectors 
+    
+queue size problem
+    -- depending on the interactions between read and write timing, a second additional slot may be necessary to ensure a write deesn't trash the contents of a concurrently occuring read. Thus, a safe estimate is that the queue must be at least 34 words 
+    
+    

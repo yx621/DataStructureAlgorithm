@@ -1,0 +1,6 @@
+destructor in base class need to be declared virtual
+
+    calling a method/function with an object pointer always invokes:
+        -- the most derived class function, if a method is virtual
+        -- function implementation corresponding to object pointer type (used to call method) if a method is not virtual
+        

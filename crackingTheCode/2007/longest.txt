@@ -1,0 +1,10 @@
+It's a pretty tricky solution for this pproblem
+
+sort the array by size and putting the longest word in the front
+
+for each word, split it in all possible ways 
+    -- test -> {t est} {te st} {tes t} for example
+for eacgh pair, check if the first half and the second half both exist in the array
+return the word when the previous condition satisfied
+
+//seems we cannot handle the case that word is composed for example 3 words...

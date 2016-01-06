@@ -1,0 +1,15 @@
+1. browser contacts the DNS server to find the IP address of the URL
+2. DNS returns the back the IP address of the site 
+3. browser opens TCP connection to the web server at port 80
+4. browser fetches the html code for page request
+5. browser renders the html in the display window
+6. browser terminates the connection when window is closed
+
+DNS -- domain name resolution / domain name systems
+
+
+domain name server divided into zones. single server is responsible for knowing the host names and IP addresses for small set of zone but DNS server can work together to map all domain names to their IP addresses. If one domain name server is unable to find the IP addresses pf a requested domain, then it requests the information from other domain name servers.
+
+routing protocol in detail
+
+BGP, OSPF, RIP

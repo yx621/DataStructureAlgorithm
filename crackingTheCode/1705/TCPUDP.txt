@@ -1,0 +1,21 @@
+TCP -- transmission control protocol 
+    -- is a connection-oriented protocol. connection can be made from client to server and from then on any data can be sent along this connection
+    -- reliable
+        when send message along TCP socket, it will get there unless the connection fails completely. if get lost along the way, the server will request the lost part. Complete integrity: data will not get corrupted
+    -- ordered
+        if send 2 messages along a connection, one after the other, you know what the first message will get there first. Don't have to worry about data arriving in the wrong order
+    -- HeavyWeight
+        when low level part of the TCP stream arrive in wrong order, re-send requests have to be sent. All the out of sequence parts must be put back together, which requires a bit of work.
+        
+UDP -- user datagram protocol
+    -- connectionless protocol. send messages across the network in chunks
+    -- unreliable
+        when send a message, you don't know if it will get there. it coule get lost along the way
+    -- not ordered
+        if send 2 messages out, don't know which order they will arrive in
+    -- lightweight
+        no ordering of message, no tracking connections. It's just fire and forget --> a lot of quicker and the network card/OS have to do little work to translate the data back from the packet
+        
+TCP handles reliable delivery (ACK mechanism), flow control (TCP sender's/receiver's window)
+TCP packet, receiver of a packet must acknowledge that the packet is received. If not acknowledgement, the packet is sent again. which guarantees each single packet is delivered. ACK is a packet used in TCP to acknowledge receipt of a packet. A TCP window is the amount of outstanding (unacknowledged by the recipient) data a sender can send on a particular connection before it gets an acknowledgement back from the receiver that it has gotten some of it.
+

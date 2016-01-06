@@ -1,0 +1,21 @@
+object design is very logical, everything present is object
+
+for the musical juke box
+Objects we need to have 
+    -- CD (Collection)
+    -- User 
+    -- CDPlayer
+    -- TrackSelector (can select song and return the current song)
+
+For the CD
+    -- no more object inside, just it's content is needed
+For the Song
+    -- (it should have name and duration)
+For the CDPlayer
+    -- CD
+    -- PalyList
+    
+For the PalyList
+    -- Song
+    -- SongQueue
+    

@@ -1,0 +1,14 @@
+keyboard send a scan code of the key to the keyboard controller (scan code for key pressed and key released is different)
+
+keyboard controller interprets the scan code and stores it in a buffer
+
+keyboard controller sends a hardware interrupt to the processor. This is done by putting signal on "Interrupt request line": IRQ 1.
+
+Interrupt controller maps IRQ 1 into INT 9
+
+interrupt is a signal tells the processor to stop what is doing currently and do some special task
+
+processor involkes the interrupt controller. CPU fetches the address of "interrupt service routine" (ISR) from interrupt vector table maintained by OS (processor use the IRQ number for this)
+
+ISR reads the scan code from port 60h and decides whether to process it or pass the control to program for taking action
+

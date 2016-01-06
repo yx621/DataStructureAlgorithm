@@ -1,0 +1,28 @@
+Thread and deadlock
+
+deadlock conditions
+    -- only one process can use a resource at a given time
+    -- hold and wait: process holding a resource can request new one
+    -- no premption: one process cannot forcibly remove another process' resource
+    -- circular wait: 2 or more processes form a circular chain where each process is waiting on another resource in the chain
+    
+    
+process -- instance of computer programs being executed
+thread is the smallest sequence of instructions that can be managed by a scheduler
+
+deadlock prevention
+    -- entails removing one of above conditions, but many conditions care difficult to satisfy
+    -- circular wait, try to avoid it in the real implementation
+    
+process and thread relates to each other but fundamentally different
+
+each process is an independent entity to which CPU resources are allocated and each process is executed in a separate address space. one process cannot access variables and data structures of another process. 
+
+thread uses the same stack space of a process. multiple threads share parts of their state 
+multiple threads cna read and write the same memory address 
+but each thread has its own register and stack but other thread can read and write the same stack memory
+
+thread is an execution path of a process. one thread modifies a process resource, the change is immediately visible to sibling threads
+
+context switching -- bring a waiting process into execution and sending an executing process into waiting/terminate state in multitasking system. OS bring the state information of the waiting processes into memory and save the state information of the running process
+

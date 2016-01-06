@@ -1,0 +1,21 @@
+Hash table implementation
+    -- hash function to each bucket/ArrayList, so values are not sorted in a hash table in the sorted order
+    -- hash table use the key to find the index, so insert and look up can be done in amortised time 
+    -- handle potential collision
+
+STL map
+    -- insert the key/value pair in sorted key order
+    -- use tree to store the value O(NlogN) time insert/lookup
+    -- no collision issue
+    -- can handle findmax/findmin
+    -- print all in sorted order
+    -- find exact element/next smallest
+
+Hash table implementation
+    -- good hash function (hash valus are uniformly distributed)
+    -- collision resolving method
+    -- dynamically increase/decrease the hash table size
+
+use STL map
+    -- takes O(lonN) time but if input number is small, will be fine
+    
